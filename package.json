@@ -1,0 +1,74 @@
+{
+  "name": "viswiz",
+  "description": "The VisWiz.io CLI",
+  "version": "1.0.0",
+  "main": "bin/viswiz",
+  "author": "Valentin Agachi <valentin@viswiz.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viswiz-io/viswiz-cli"
+  },
+  "license": "MIT",
+  "keywords": [
+    "visual regression testing",
+    "visual testing",
+    "automated testing",
+    "automation",
+    "testing",
+    "screenshot",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "bin": {
+    "viswiz": "./bin/viswiz"
+  },
+  "files": [
+    "bin/",
+    "dist/"
+  ],
+  "scripts": {
+    "build": "babel src/ --out-dir dist/ --ignore \"**/__mocks__/*\"",
+    "build-pkg": "yarn build && pkg --out-path ./pkg .",
+    "docs": "esdoc",
+    "lint": "eslint . --cache --fix --ignore-pattern '!.eslintrc.js'",
+    "pretty": "prettier --write --list-different \"**/*.js\"",
+    "prepack": "yarn build",
+    "pretest": "yarn build",
+    "release": "standard-version -a",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test": "yarn test:jest"
+  },
+  "dependencies": {
+    "commander": "3.0.1",
+    "env-ci": "4.1.1",
+    "progress": "2.0.3",
+    "viswiz-sdk": "3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.6.0",
+    "@babel/core": "7.6.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "7.6.0",
+    "babel-jest": "24.9.0",
+    "eslint": "6.3.0",
+    "husky": "3.0.5",
+    "jest": "24.9.0",
+    "lint-staged": "9.2.5",
+    "nock": "11.3.3",
+    "prettier": "1.18.2",
+    "standard-version": "7.0.0",
+    "validate-commit-msg": "2.14.0"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "lint-staged"
+    }
+  }
+}
