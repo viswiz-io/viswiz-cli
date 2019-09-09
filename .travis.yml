@@ -14,3 +14,10 @@ notifications:
 script:
   - yarn lint
   - yarn test
+
+deploy:
+  - provider: script
+    script: tools/pkg.sh
+    skip_cleanup: true
+    on:
+      tags: true

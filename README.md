@@ -3,9 +3,9 @@
 > The official VisWiz.io CLI.
 
 [![Travis branch](https://img.shields.io/travis/viswiz-io/viswiz-cli/master.svg?style=flat-square)](https://travis-ci.org/viswiz-io/viswiz-cli)
-[![NPM version](https://img.shields.io/npm/v/viswiz-cli.svg?style=flat-square)](https://www.npmjs.com/package/viswiz-cli)
+[![NPM version](https://img.shields.io/npm/v/viswiz.svg?style=flat-square)](https://www.npmjs.com/package/viswiz)
 [![Dependencies](https://img.shields.io/david/viswiz-io/viswiz-cli.svg?style=flat-square)](https://david-dm.org/viswiz-io/viswiz-cli)
-[![Install size](https://packagephobia.now.sh/badge?p=viswiz-cli)](https://packagephobia.now.sh/result?p=viswiz-cli)
+[![Install size](https://packagephobia.now.sh/badge?p=viswiz)](https://packagephobia.now.sh/result?p=viswiz)
 
 Welcome to the [VisWiz.io](https://www.viswiz.io/) CLI documentation.
 
@@ -25,6 +25,9 @@ Or using `npm`:
 ```
 $ npm install -D viswiz
 ```
+
+Alternatively, you can install a prepackaged binary for your OS. Download binaries from the
+[Releases](https://github.com/viswiz-io/viswiz-cli/releases) page.
 
 ## Configuration
 
