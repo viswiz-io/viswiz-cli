@@ -10,7 +10,7 @@ PROJECT="viswiz-cli"
 VERSION=$(node -p "require('./package.json').version")
 SUFFIXES=('alpine' 'linux' 'macos' 'win.exe')
 
-rm pkg/*
+rm -rf pkg/*
 yarn build-pkg
 for SUFFIX in ${SUFFIXES[@]}; do
 	mv -f pkg/viswiz-${SUFFIX} pkg/viswiz-${VERSION}-${SUFFIX}
