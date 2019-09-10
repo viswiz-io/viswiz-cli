@@ -14,6 +14,8 @@ export function error(msg, cmd) {
 	if (!TEST) {
 		process.exit(1);
 	}
+
+	return true;
 }
 
 function padNumber(value, length = 2) {

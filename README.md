@@ -11,8 +11,13 @@ Welcome to the [VisWiz.io](https://www.viswiz.io/) CLI documentation.
 
 The CLI allows you to query and create new projects, builds or images within the VisWiz.io service.
 
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#commands)
+- [Commands](#usage)
+- [Changelog](#changelog)
 
-## Installation
+# Installation
 
 Install the module using `yarn`:
 
@@ -26,10 +31,10 @@ Or using `npm`:
 $ npm install -D viswiz
 ```
 
-Alternatively, you can install a prepackaged binary for your OS. Download binaries from the
+Alternatively, you can download a prepackaged binary for your OS from the
 [Releases](https://github.com/viswiz-io/viswiz-cli/releases) page.
 
-## Configuration
+# Configuration
 
 The following environment keys are used when their corresponding flags are missing:
 
@@ -39,27 +44,26 @@ The following environment keys are used when their corresponding flags are missi
 CI environment variables for popular [CI services](https://www.npmjs.com/package/env-ci#supported-ci)
 are also used for the `branch`, `message` and `revision` flags.
 
-## Options
+# Usage
+
+On popular [CI services](https://www.npmjs.com/package/env-ci#supported-ci), assuming
+`VISWIZ_API_KEY` and `VISWIZ_PROJECT_ID` values are configured in the CI environment:
 
 ```
-$ viswiz --help
-Usage: viswiz [options] [command]
-
-Options:
-  -V, --version              output the version number
-  -k, --api-key [apiKey]     The API key of a VisWiz account to use. Defaults to VISWIZ_API_KEY env.
-  -p, --project [projectID]  The ID of a VisWiz project to use. Defaults to VISWIZ_PROJECT_ID env.
-  -h, --help                 output usage information
-
-Commands:
-  build [options]            Creates a new build on VisWiz.io and sends images for regression testing.
-
+$ viswiz build --image-dir ./path/to/images/directory
 ```
 
-### `build` options
+# Commands
 
-```
+- [`build`](#build)
+- [`build-result`](#build-result)
+- [`--help`](#help)
+
+## `build`
+
+```bash
 $ viswiz build --help
+
 Usage: viswiz build [options]
 
 Creates a new build on VisWiz.io and sends images for regression testing.
@@ -73,21 +77,45 @@ Options:
   -h, --help                       output usage information
 ```
 
-## Usage
+## `build-result`
 
-On popular [CI services](https://www.npmjs.com/package/env-ci#supported-ci), assuming
-`VISWIZ_API_KEY` and `VISWIZ_PROJECT_ID` values are configured in the CI environment:
+```bash
+$ viswiz build-result --help
+
+Usage: viswiz build-result [options]
+
+Gets or waits for a build result
+
+Options:
+  -b, --build [buildID]            The build ID to get results for. If not sent, then the most recent build for the project is used.
+  -w, --wait-for-result [timeout]  Whether to wait for the result of the build comparison (disabled by default). Waits for a maximum number of seconds (defaults to 600).
+  -h, --help                       output usage information
+```
+
+## `--help`
+
+```bash
+$ viswiz --help
+
+Usage: viswiz [options] [command]
+
+Options:
+  -V, --version              output the version number
+  -k, --api-key [apiKey]     The API key of a VisWiz account to use. Defaults to VISWIZ_API_KEY env.
+  -p, --project [projectID]  The ID of a VisWiz project to use. Defaults to VISWIZ_PROJECT_ID env.
+  -h, --help                 output usage information
+
+Commands:
+  build [options]            Creates a new build on VisWiz.io and sends images for regression testing.
 
 ```
-$ viswiz build --image-dir ./path/to/images/directory
-```
 
-## Changelog
+# Changelog
 
 The changelog can be found here:
 [CHANGELOG.md](https://github.com/viswiz-io/viswiz-cli/blob/master/CHANGELOG.md#readme).
 
-## Authors and license
+# Authors and license
 
 Author: [VisWiz.io](https://www.viswiz.io/).
 
