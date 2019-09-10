@@ -1,7 +1,7 @@
 {
   "name": "viswiz",
   "description": "The VisWiz.io CLI",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "bin/viswiz",
   "author": "Valentin Agachi <valentin@viswiz.io>",
   "repository": {
