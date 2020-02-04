@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/viswiz-io/viswiz-cli/compare/v1.1.1...v2.0.0) (2020-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Images in folders start using `/` as the folder separator. Previously this was replaced with `__`.
+
+### Features
+
+* Upgrade viswiz-sdk v5.0.0 ([5ff2e7d](https://github.com/viswiz-io/viswiz-cli/commit/5ff2e7d9079cf689dd62c29fbcf5c7175549081b))
+
 ### [1.1.1](https://github.com/viswiz-io/viswiz-cli/compare/v1.1.0...v1.1.1) (2019-12-01)
 
 ## [1.1.0](https://github.com/viswiz-io/viswiz-cli/compare/v1.0.0...v1.1.0) (2019-09-10)
