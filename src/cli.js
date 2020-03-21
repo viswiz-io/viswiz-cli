@@ -23,8 +23,4 @@ export default function run(argv) {
 	commands.buildResult(program);
 
 	program.parse(argv);
-
-	if (!program.args.length) {
-		program.help();
-	}
 }

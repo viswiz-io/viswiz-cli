@@ -1,12 +1,10 @@
 {
 	"src/*.js": [
 		"prettier --write --list-different",
-		"eslint --fix --ignore-pattern '!.eslintrc.js'",
-		"git add"
+		"eslint --fix --ignore-pattern '!.eslintrc.js'"
 	],
 	"__tests__/*.js": [
 		"prettier --write --list-different",
-		"eslint --fix --ignore-pattern '!.eslintrc.js'",
-		"git add"
+		"eslint --fix --ignore-pattern '!.eslintrc.js'"
 	]
 }
