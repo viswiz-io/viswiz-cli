@@ -45,7 +45,7 @@
     "commander": "5.0.0",
     "env-ci": "5.0.2",
     "progress": "2.0.3",
-    "viswiz-sdk": "5.0.0"
+    "viswiz-sdk": "5.1.0"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",

@@ -46,7 +46,8 @@ export async function build(program, options) {
 			} else {
 				progress.tick();
 			}
-		}
+		},
+		options.concurrency || 4
 	);
 
 	const url = `https://app.viswiz.io/projects/${projectID}/build/${buildID}/results`;
@@ -85,6 +86,10 @@ export default function configure(program) {
 		.option(
 			'-r, --revision [rev]',
 			'The revision for the build. Auto-detected on popular CIs.'
+		)
+		.option(
+			'-c, --concurrency [number]',
+			'Determines how many images are uploaded in parallel (defaults to 4).'
 		)
 		.option(
 			'-w, --wait-for-result [timeout]',

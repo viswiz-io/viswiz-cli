@@ -73,6 +73,7 @@ Options:
   -b, --branch [branch name]       The branch name for the build. Auto-detected on popular CIs.
   -m, --message [commit message]   The commit message for the build. Auto-detected on popular CIs.
   -r, --revision [rev]             The revision for the build. Auto-detected on popular CIs.
+  -c, --concurrency [number]       Determines how many images are uploaded in parallel (defaults to 4).
   -w, --wait-for-result [timeout]  Whether to wait for the result of the build comparison (disabled by default). Waits for a maximum number of seconds (defaults to 600).
   -h, --help                       output usage information
 ```
