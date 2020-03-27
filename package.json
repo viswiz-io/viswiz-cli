@@ -38,6 +38,7 @@
     "pretest": "yarn build",
     "release": "standard-version -a",
     "test:jest": "jest",
+    "test:pkg": "yarn build-pkg && ./pkg/viswiz-linux --help",
     "test:watch": "jest --watch",
     "test": "yarn test:jest"
   },
