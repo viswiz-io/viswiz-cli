@@ -77,11 +77,19 @@ export async function buildResult(program, options) {
 
 	const client = new VisWiz(apiKey);
 
-	const project = await client.getProject(projectID);
+	const [project, builds] = await Promise.all([
+		client.getProject(projectID),
+		client.getBuilds(projectID),
+	]);
 
-	const builds = await client.getBuilds(projectID);
 	if (!builds.length) {
 		return error('Error: The project does not have any builds!', program);
+	}
+
+	if (builds.length === 1) {
+		log('This is the first build for this project. No comparison available.');
+
+		return 'OK';
 	}
 
 	let build;

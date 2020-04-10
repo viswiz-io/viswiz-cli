@@ -18,6 +18,10 @@ describe('build', () => {
 		...buildPayload,
 		projectID: PROJECT_ID,
 	};
+	const buildOther = {
+		...buildResponse,
+		id: 'other',
+	};
 
 	let program;
 	let cmd;
@@ -61,14 +65,11 @@ describe('build', () => {
 					.reply(200, {
 						builds: [
 							{
-								id: 'anotherbuild',
-								...buildResponse,
-							},
-							{
 								id: BUILD_ID,
 								diffPercentage: 0.25,
 								...buildResponse,
 							},
+							buildOther,
 						],
 					});
 
@@ -96,6 +97,7 @@ describe('build', () => {
 								diffPercentage: 0.51,
 								...buildResponse,
 							},
+							buildOther,
 						],
 					});
 
@@ -106,6 +108,23 @@ describe('build', () => {
 					'Project difference threshold: 0.5%',
 					'Build failed!',
 					'',
+				]);
+				expect(result).toContain('OK');
+				expect(scope.isDone()).toBeTruthy();
+			});
+
+			test('passes, first build', async () => {
+				const scope = nockSetup()
+					.get(`/projects/${PROJECT_ID}/builds`)
+					.matchHeader('Authorization', `Bearer ${API_KEY}`)
+					.reply(200, {
+						builds: [buildResponse],
+					});
+
+				const result = await buildResult(program, cmd);
+
+				expect(global.LOGS).toEqual([
+					'This is the first build for this project. No comparison available.',
 				]);
 				expect(result).toContain('OK');
 				expect(scope.isDone()).toBeTruthy();
@@ -126,13 +145,10 @@ describe('build', () => {
 					.reply(200, {
 						builds: [
 							{
-								id: 'anotherbuild',
-								...buildResponse,
-							},
-							{
 								id: BUILD_ID,
 								...buildResponse,
 							},
+							buildOther,
 						],
 					})
 					.get(`/projects/${PROJECT_ID}/builds`)
@@ -140,15 +156,12 @@ describe('build', () => {
 					.reply(200, {
 						builds: [
 							{
-								id: 'anotherbuild',
-								...buildResponse,
-							},
-							{
 								id: BUILD_ID,
 								diffedAt: new Date().toISOString(),
 								diffPercentage: 0.25,
 								...buildResponse,
 							},
+							buildOther,
 						],
 					});
 
@@ -179,6 +192,7 @@ describe('build', () => {
 								diffPercentage: 0.51,
 								...buildResponse,
 							},
+							buildOther,
 						],
 					});
 
@@ -207,6 +221,7 @@ describe('build', () => {
 								id: BUILD_ID,
 								...buildResponse,
 							},
+							buildOther,
 						],
 					});
 
