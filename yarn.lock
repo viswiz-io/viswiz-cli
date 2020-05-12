@@ -2841,10 +2841,10 @@ globby@^11.0.0:
     merge2 "^1.3.0"
     slash "^3.0.0"
 
-got@10.6.0:
-  version "10.6.0"
-  resolved "https://registry.yarnpkg.com/got/-/got-10.6.0.tgz#ac3876261a4d8e5fc4f81186f79955ce7b0501dc"
-  integrity sha512-3LIdJNTdCFbbJc+h/EH0V5lpNpbJ6Bfwykk21lcQvQsEcrzdi/ltCyQehFHLzJ/ka0UMH4Slg0hkYvAZN9qUDg==
+got@10.7.0:
+  version "10.7.0"
+  resolved "https://registry.yarnpkg.com/got/-/got-10.7.0.tgz#62889dbcd6cca32cd6a154cc2d0c6895121d091f"
+  integrity sha512-aWTDeNw9g+XqEZNcTjMMZSy7B7yE9toWOFYip7ofFTLleJhvZwUxxTxkTpKvF+p1SAA4VHmuEy7PiHTHyq8tJg==
   dependencies:
     "@sindresorhus/is" "^2.0.0"
     "@szmarczak/http-timer" "^4.0.0"
@@ -6357,14 +6357,14 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-viswiz-sdk@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/viswiz-sdk/-/viswiz-sdk-5.1.0.tgz#e4788aa0c4cf449119b80978a6185012175b3bd0"
-  integrity sha512-xVWMThW8/90nIvqYZVctpVNevBZ0Nc5J6OCzI7CfSNlmQO3xZLgbZppaBZFN1ZlwE7x/8tIzRlUQWHIiXSGwmQ==
+viswiz-sdk@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/viswiz-sdk/-/viswiz-sdk-5.2.0.tgz#acfbb5d550793c2377af099505ff394dbbd0644c"
+  integrity sha512-HU9NSW7bQc9NLje1xsdv34wLRZ2+NygBUI3bNbweazgIWdR0y98IItvTV0Kb/e3be24+dGqF9wIxMjfu5YBrdw==
   dependencies:
     form-data "3.0.0"
     glob "7.1.6"
-    got "10.6.0"
+    got "10.7.0"
     p-map "4.0.0"
 
 w3c-hr-time@^1.0.1:
