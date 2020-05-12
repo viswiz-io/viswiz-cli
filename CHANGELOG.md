@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/viswiz-io/viswiz-cli/compare/v2.1.2...v2.2.0) (2020-05-12)
+
+
+### Features
+
+* Retry images create requests ([8753999](https://github.com/viswiz-io/viswiz-cli/commit/875399909e807c2a39f0f118794c48461862f274))
+
 ### [2.1.2](https://github.com/viswiz-io/viswiz-cli/compare/v2.1.1...v2.1.2) (2020-04-10)
 
 
