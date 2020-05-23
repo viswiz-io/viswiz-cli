@@ -68,9 +68,7 @@ export async function build(program, options) {
 export default function configure(program) {
 	program
 		.command('build')
-		.description(
-			'Creates a new build on VisWiz.io and sends images for regression testing.'
-		)
+		.description('Creates a new build on VisWiz.io and sends images for regression testing.')
 		.option(
 			'-i, --image-dir <path>',
 			'The path to a directory (scanned recursively) with images used for the build.'
@@ -83,10 +81,7 @@ export default function configure(program) {
 			'-m, --message [commit message]',
 			'The commit message for the build. Auto-detected on popular CIs.'
 		)
-		.option(
-			'-r, --revision [rev]',
-			'The revision for the build. Auto-detected on popular CIs.'
-		)
+		.option('-r, --revision [rev]', 'The revision for the build. Auto-detected on popular CIs.')
 		.option(
 			'-c, --concurrency [number]',
 			'Determines how many images are uploaded in parallel (defaults to 4).'

@@ -227,9 +227,7 @@ describe('build', () => {
 
 				cmd.waitForResult = '2';
 
-				return expect(buildResult(program, cmd)).rejects.toThrow(
-					'Waiting for results timed out'
-				);
+				return expect(buildResult(program, cmd)).rejects.toThrow('Waiting for results timed out');
 			});
 		});
 

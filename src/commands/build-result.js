@@ -23,11 +23,7 @@ async function waitForResult(client, projectID, buildID, maxTime) {
 			let time = 0;
 
 			function poll() {
-				log(
-					`Waiting for results to be ready... (${formatTime(time)}/${formatTime(
-						maxTime
-					)})`
-				);
+				log(`Waiting for results to be ready... (${formatTime(time)}/${formatTime(maxTime)})`);
 
 				client
 					.getBuilds(projectID)
