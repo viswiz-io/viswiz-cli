@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/viswiz-io/viswiz-cli/compare/v2.2.0...v2.2.1) (2020-05-23)
+
+
+### Bug Fixes
+
+* Upgrade all dependencies :arrow_up: ([65a4763](https://github.com/viswiz-io/viswiz-cli/commit/65a4763888ac57130d1b1474ecc9d6c29484d90a))
+
 ## [2.2.0](https://github.com/viswiz-io/viswiz-cli/compare/v2.1.2...v2.2.0) (2020-05-12)
 
 
