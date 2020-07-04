@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.2](https://github.com/viswiz-io/viswiz-cli/compare/v2.2.1...v2.2.2) (2020-07-04)
+
+
+### Bug Fixes
+
+* viswiz-sdk v5.2.2 - fix retry images ([9fe862c](https://github.com/viswiz-io/viswiz-cli/commit/9fe862cdd83f4fea3394944cb85b0c977b205cea))
+
 ### [2.2.1](https://github.com/viswiz-io/viswiz-cli/compare/v2.2.0...v2.2.1) (2020-05-23)
 
 
